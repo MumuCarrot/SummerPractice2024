@@ -20,5 +20,12 @@ namespace SummerPractice2024
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            TestClass.First = int.Parse(FirstTB.Text);
+            TestClass.Second = int.Parse(SecondTB.Text);
+            Answer.Text = TestClass.Summary().ToString();
+        }
     }
 }
