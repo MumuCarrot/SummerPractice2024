@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerPractice2024", "SummerPractice2024\SummerPractice2024.csproj", "{50E66EBF-34C8-4AED-8230-EC3A4CBB2C3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SummerPractice2024", "SummerPractice2024\SummerPractice2024.csproj", "{50E66EBF-34C8-4AED-8230-EC3A4CBB2C3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestPrj", "UnitTestPrj\UnitTestPrj.csproj", "{02F94A9E-24FF-4033-A77F-B9E2A15B4B5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{50E66EBF-34C8-4AED-8230-EC3A4CBB2C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50E66EBF-34C8-4AED-8230-EC3A4CBB2C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50E66EBF-34C8-4AED-8230-EC3A4CBB2C3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02F94A9E-24FF-4033-A77F-B9E2A15B4B5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02F94A9E-24FF-4033-A77F-B9E2A15B4B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02F94A9E-24FF-4033-A77F-B9E2A15B4B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02F94A9E-24FF-4033-A77F-B9E2A15B4B5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
