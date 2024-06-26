@@ -1,4 +1,6 @@
-﻿namespace SummerPractice2024
+﻿using System.IO;
+
+namespace SummerPractice2024
 {
     public static class Reader
     {
@@ -6,7 +8,7 @@
         {
             try
             {
-                string path = @"..\Data\" + fileName;
+                string path = @"..\..\..\Data\" + fileName;
 
                 string[] lines = File.ReadAllLines(path);
 

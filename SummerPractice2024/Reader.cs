@@ -8,7 +8,7 @@ namespace SummerPractice2024
         {
             try
             {
-                string path = @"..\Data\" + fileName;
+                string path = @"..\..\..\Data\" + fileName;
 
                 string[] lines = File.ReadAllLines(path);
 
