@@ -7,11 +7,37 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <StackPanel>
-            <TextBox x:Name="FirstTB"/>
-            <TextBox x:Name="SecondTB"/>
-            <TextBlock x:Name="Answer"/>
-            <Button Click="Button_Click"/>
-        </StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <GridSplitter/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <ToggleButton Grid.Column="0" Content="Users" x:Name="LeftBtn" 
+                              IsChecked="True"/>
+                
+                <ToggleButton Grid.Column="1" Content="Books" x:Name="RightBtn"/>
+
+            </Grid>
+
+            <ScrollViewer Grid.Row="1" x:Name="ContentScrollViewer">
+                <StackPanel x:Name="ContentStack"/>
+            </ScrollViewer>
+
+        </Grid>
+        
     </Grid>
 </Window>
