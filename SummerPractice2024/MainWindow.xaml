@@ -27,9 +27,10 @@
                 </Grid.ColumnDefinitions>
 
                 <ToggleButton Grid.Column="0" Content="Users" x:Name="LeftBtn" 
-                              IsChecked="True"/>
+                              Checked="LeftBtn_Checked" Click="Button_Click"/>
                 
-                <ToggleButton Grid.Column="1" Content="Books" x:Name="RightBtn"/>
+                <ToggleButton Grid.Column="1" Content="Books" x:Name="RightBtn" 
+                              Checked="RightBtn_Checked" Click="Button_Click"/>
 
             </Grid>
 
