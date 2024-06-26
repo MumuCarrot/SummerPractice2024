@@ -1,4 +1,4 @@
-﻿using C = SummerPractice2024;
+﻿using C = SPLibrary;
 
 namespace ModuleTesting
 {

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SummerPractice2024", "Summe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleTesting", "ModuleTesting\ModuleTesting.csproj", "{5AFE9FF4-6702-473E-9D28-BB7B780CFBF6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPLibrary", "SPLibrary\SPLibrary.csproj", "{43E1BA01-9B69-41E9-989F-45B4064A681F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5AFE9FF4-6702-473E-9D28-BB7B780CFBF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AFE9FF4-6702-473E-9D28-BB7B780CFBF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AFE9FF4-6702-473E-9D28-BB7B780CFBF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43E1BA01-9B69-41E9-989F-45B4064A681F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43E1BA01-9B69-41E9-989F-45B4064A681F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43E1BA01-9B69-41E9-989F-45B4064A681F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43E1BA01-9B69-41E9-989F-45B4064A681F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

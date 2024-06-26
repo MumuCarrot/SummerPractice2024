@@ -1,4 +1,4 @@
-﻿namespace SummerPractice2024
+﻿namespace SPLibrary
 {
     public static class Parser
     {

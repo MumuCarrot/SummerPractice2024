@@ -24,4 +24,8 @@
     <Folder Include="Data\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SPLibrary\SPLibrary.csproj" />
+  </ItemGroup>
+
 </Project>
