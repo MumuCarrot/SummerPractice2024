@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="50" d:DesignWidth="300">
     <Grid Height="50">
-        <Button x:Name="UserControlButton" Content="Username" FontSize="16" FontWeight="Bold">
+        <Button x:Name="UserControlButton" Content="Username" FontSize="16" FontWeight="Bold" Click="UserControlButton_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Template">

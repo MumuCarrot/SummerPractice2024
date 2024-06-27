@@ -39,6 +39,8 @@
             </ScrollViewer>
 
         </Grid>
-        
+
+        <Frame Grid.Column="1" x:Name="InformationFrame" NavigationUIVisibility="Hidden"/>
+
     </Grid>
 </Window>

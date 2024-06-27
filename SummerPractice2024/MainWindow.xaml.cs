@@ -47,8 +47,8 @@ namespace SummerPractice2024
         private void ChargeStack() 
         {
             ContentStack.Children.Clear();
-            if (LeftBtn.IsChecked is not null && (bool)LeftBtn.IsChecked) foreach (var user in UserList) ContentStack.Children.Add(new UserButton() { SetUsername = user, });
-            else foreach (var book in BookList) ContentStack.Children.Add(new BookButton(book));
+            if (LeftBtn.IsChecked is not null && (bool)LeftBtn.IsChecked) foreach (var user in UserList) ContentStack.Children.Add(new UserButton(this, user));
+            else foreach (var book in BookList) ContentStack.Children.Add(new BookButton(this, book));
         }
     }
 }
