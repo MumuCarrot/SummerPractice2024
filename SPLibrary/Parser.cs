@@ -9,17 +9,17 @@
                 List<Book> bookList = new List<Book>();
                 foreach (string book in stringBookList)
                 {
-                    string[] parts = book.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+                    string[] parts = book.Split(new[] { ';' });
 
                     if (parts.Length >= 5)
                     {
                         bookList.Add(new Book()
                         {
-                            BookName = parts[0].Trim(),
-                            BookDesk = parts[1].Trim(),
-                            BookAuthor = parts[2].Trim(),
-                            Handler = parts[3].Trim(),
-                            ExpiredDate = parts[4].Trim()
+                            BookName = (string.IsNullOrWhiteSpace(parts[0]) ? null : parts[0].Trim()) ?? "",
+                            BookDesk = (string.IsNullOrWhiteSpace(parts[1]) ? null : parts[1].Trim()) ?? "",
+                            BookAuthor = (string.IsNullOrWhiteSpace(parts[2]) ? null : parts[2].Trim()) ?? "",
+                            Handler = (string.IsNullOrWhiteSpace(parts[3]) ? null : parts[3].Trim()) ?? "",
+                            ExpiredDate = (string.IsNullOrWhiteSpace(parts[4]) ? null : parts[4].Trim()) ?? ""
                         });
                     }
                     else
