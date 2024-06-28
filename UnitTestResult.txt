@@ -1,0 +1,7 @@
+Microsoft (R) Test Execution Command Line Tool Version 17.7.0-preview-23364-03+bc17bb9693cfc4778ded51aa0ab7f1065433f989 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:     7, Skipped:     0, Total:     7, Duration: 92 ms - ModuleTesting.dll (net7.0)
