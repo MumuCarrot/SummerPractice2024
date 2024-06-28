@@ -14,8 +14,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="BookName" Grid.Row="0" TextWrapping="Wrap" FontSize="24" IsReadOnly="True"/>
-        <TextBox x:Name="BookAuthor" Grid.Row="1" TextWrapping="Wrap" FontSize="18" IsReadOnly="True"/>
+        <TextBox x:Name="BookName" Grid.Row="0" Margin="0,0,0,-2" TextWrapping="Wrap" FontSize="24" IsReadOnly="True"/>
+        <TextBox x:Name="BookAuthor" Grid.Row="1" Margin="0,0,0,-2" TextWrapping="Wrap" FontSize="18" IsReadOnly="True"/>
         <TextBox x:Name="BookDesk" Grid.Row="2" TextWrapping="Wrap" FontSize="18" IsReadOnly="True"/>
     </Grid>
 </Page>
