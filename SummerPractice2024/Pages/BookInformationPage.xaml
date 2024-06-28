@@ -12,10 +12,10 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="BookName" Grid.Row="0" TextWrapping="Wrap"/>
-        <TextBox x:Name="BookDesk" Grid.Row="1" TextWrapping="Wrap" Height="144"/>
-        <TextBox x:Name="BookAuthor" Grid.Row="2" TextWrapping="Wrap"/>
+        <TextBox x:Name="BookName" Grid.Row="0" TextWrapping="Wrap" FontSize="24" IsReadOnly="True"/>
+        <TextBox x:Name="BookAuthor" Grid.Row="1" TextWrapping="Wrap" FontSize="18" IsReadOnly="True"/>
+        <TextBox x:Name="BookDesk" Grid.Row="2" TextWrapping="Wrap" FontSize="18" IsReadOnly="True"/>
     </Grid>
 </Page>
