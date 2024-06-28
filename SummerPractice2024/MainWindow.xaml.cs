@@ -6,7 +6,7 @@ namespace SummerPractice2024
 {
     public partial class MainWindow : Window
     {
-        private List<string> UserList = Reader.Read("users.txt");
+        private List<Customer> UserList = Parser.ParseToCustomer(Reader.Read("users.txt"));
         private List<Book> BookList = Parser.ParseToBook(Reader.Read("books.txt"));
 
         public MainWindow()

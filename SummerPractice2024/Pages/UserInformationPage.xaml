@@ -11,8 +11,18 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBox x:Name="Username"/>
+        <TextBox x:Name="Id" Grid.Row="0" Margin="0,0,0,-2" TextWrapping="Wrap" FontSize="18" IsReadOnly="True"/>
+        <TextBox x:Name="Nickname" Grid.Row="1" Margin="0,0,0,-2" TextWrapping="Wrap" FontSize="18" IsReadOnly="True"/>
+        <TextBox x:Name="Lastname" Grid.Row="2" Margin="0,0,0,-2" TextWrapping="Wrap" FontSize="18" IsReadOnly="True"/>
+        <TextBox x:Name="Name" Grid.Row="3" Margin="0,0,0,-2" TextWrapping="Wrap" FontSize="18" IsReadOnly="True"/>
+        <TextBox x:Name="PhoneNumber" Grid.Row="4" Margin="0,0,0,-2" TextWrapping="Wrap" FontSize="18" IsReadOnly="True"/>
+        <TextBox x:Name="Adress" Grid.Row="5" Margin="0,0,0,-2" TextWrapping="Wrap" FontSize="18" IsReadOnly="True"/>
     </Grid>
 </Page>

@@ -31,5 +31,36 @@
             }
             else throw new Exception("Parser error: list count is 0!");
         }
+
+        public static List<Customer> ParseToCustomer(List<string> stringCustomerList)
+        {
+            if (stringCustomerList.Count > 0)
+            {
+                List<Customer> customerList = new List<Customer>();
+                foreach (string customer in stringCustomerList)
+                {
+                    string[] parts = customer.Split(new[] { ';' });
+
+                    if (parts.Length >= 6)
+                    {
+                        customerList.Add(new Customer()
+                        {
+                            Id = (string.IsNullOrWhiteSpace(parts[0]) ? null : parts[0].Trim()) ?? "",
+                            Nickname = (string.IsNullOrWhiteSpace(parts[1]) ? null : parts[1].Trim()) ?? "",
+                            LastName = (string.IsNullOrWhiteSpace(parts[2]) ? null : parts[3].Trim()) ?? "",
+                            Name = (string.IsNullOrWhiteSpace(parts[3]) ? null : parts[2].Trim()) ?? "",
+                            PhoneNumber = (string.IsNullOrWhiteSpace(parts[4]) ? null : parts[4].Trim()) ?? "",
+                            Adress = (string.IsNullOrWhiteSpace(parts[5]) ? null : parts[5].Trim()) ?? ""
+                        });
+                    }
+                    else
+                    {
+                        throw new Exception("Error: Not enough data to create a Customer object.");
+                    }
+                }
+                return customerList;
+            }
+            else throw new Exception("Parser error: list count is 0!");
+        }
     }
 }
