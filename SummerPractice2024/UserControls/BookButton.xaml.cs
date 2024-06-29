@@ -21,7 +21,7 @@ namespace SummerPractice2024.UserControls
 
         private void BookControlButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            SPParent.InformationFrame.Content = new BookInformationPage(book);
+            SPParent.InformationFrame.Content = new BookInformationPage(SPParent, book);
         }
     }
 }

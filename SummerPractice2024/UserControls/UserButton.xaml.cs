@@ -21,7 +21,7 @@ namespace SummerPractice2024
 
         private void UserControlButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            SPParent.InformationFrame.Content = new UserInformationPage(_username);
+            SPParent.InformationFrame.Content = new UserInformationPage(SPParent, _username);
         }
     }
 }

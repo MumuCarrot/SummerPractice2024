@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SummerPractice2024"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Margin="10">
+    <Grid Margin="2">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
             <ColumnDefinition/>
@@ -16,20 +16,26 @@
 
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="30"/>
+                <RowDefinition Height="60"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
             <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <ToggleButton Grid.Column="0" Content="Users" x:Name="LeftBtn" 
+                <Button x:Name="CreateNewElement" Content="Create new selected element" Grid.ColumnSpan="2" Click="CreateNewElement_Click"/>
+
+                <ToggleButton Grid.Column="0" Grid.Row="1" Content="Users" x:Name="LeftBtn" 
                               Checked="LeftBtn_Checked" Click="Button_Click"/>
-                
-                <ToggleButton Grid.Column="1" Content="Books" x:Name="RightBtn" 
+
+                <ToggleButton Grid.Column="1" Grid.Row="1" Content="Books" x:Name="RightBtn" 
                               Checked="RightBtn_Checked" Click="Button_Click"/>
 
             </Grid>
@@ -40,7 +46,7 @@
 
         </Grid>
 
-        <Frame Grid.Column="1" x:Name="InformationFrame" NavigationUIVisibility="Hidden"/>
+        <Frame Grid.Column="1" x:Name="InformationFrame" NavigationUIVisibility="Hidden" Margin="5 0 0 0"/>
 
     </Grid>
 </Window>
