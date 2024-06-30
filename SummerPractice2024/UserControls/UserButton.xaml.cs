@@ -6,22 +6,24 @@ namespace SummerPractice2024
 {
     public partial class UserButton : UserControl
     {
-        private MainWindow SPParent;
-        private Customer _username;
+        private MainWindow _mainWindow;
+        private Customer _customer;
 
         public UserButton(MainWindow parent, Customer username)
         {
             InitializeComponent();
 
-            SPParent = parent;
-            _username = username;
+            _mainWindow = parent;
+            _customer = username;
 
-            UserControlButton.Content = _username.Nickname;
+            UserControlButton.Content = _customer.Nickname;
         }
 
         private void UserControlButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            SPParent.InformationFrame.Content = new UserInformationPage(SPParent, _username);
+            var handlerList = from b in _mainWindow.BookListWithHandler where b.Handler.Equals(_customer.Nickname) select b;
+
+            _mainWindow.InformationFrame.Content = new UserInformationPage(_mainWindow, _customer, handlerList.ToList());
         }
     }
 }

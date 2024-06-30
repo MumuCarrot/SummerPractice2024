@@ -17,6 +17,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <TextBox x:Name="Id" Grid.Row="0" Margin="0,0,0,-2" TextWrapping="Wrap" FontSize="18" IsReadOnly="True"/>
@@ -26,6 +27,10 @@
         <TextBox x:Name="PhoneNumber" Grid.Row="4" Margin="0,0,0,-2" TextWrapping="Wrap" FontSize="18"/>
         <TextBox x:Name="Adress" Grid.Row="5" Margin="0,0,0,-2" TextWrapping="Wrap" FontSize="18"/>
 
-        <Button Grid.Row="6" Height="30" VerticalAlignment="Bottom" Content="Save changes" Click="SaveButton_Click"/>
+        <ScrollViewer Grid.Row="6" Margin="0 10">
+            <StackPanel x:Name="BookStack"/>
+        </ScrollViewer>
+        
+        <Button Grid.Row="7" Height="30" VerticalAlignment="Bottom" Content="Save changes" Click="SaveButton_Click"/>
     </Grid>
 </Page>

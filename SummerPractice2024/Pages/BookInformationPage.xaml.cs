@@ -7,13 +7,13 @@ namespace SummerPractice2024.Pages
 {
     public partial class BookInformationPage : Page
     {
-        private readonly MainWindow mainWindow;
+        private readonly MainWindow _mainWindow;
         private Book _book;
 
         public BookInformationPage(MainWindow mainWindow, Book book)
         {
             InitializeComponent();
-            this.mainWindow = mainWindow;
+            this._mainWindow = mainWindow;
             _book = book;
 
             BookName.Text = _book.BookName;
@@ -39,7 +39,7 @@ namespace SummerPractice2024.Pages
                 _book = book;
 
                 bool bookExists = false;
-                foreach (var b in mainWindow.BookList)
+                foreach (var b in _mainWindow.BookList)
                 {
                     if (b.BookName == _book.BookName)
                     {
@@ -54,12 +54,13 @@ namespace SummerPractice2024.Pages
 
                 if (!bookExists)
                 {
-                    mainWindow.BookList.Add(_book);
+                    _mainWindow.BookList.Add(_book);
                 }
 
-                mainWindow.Button_Click(sender, e);
+                _mainWindow.Button_Click(sender, e);
+                _mainWindow.UpdateBookLists();
 
-                Writer.WriteListToTxt(mainWindow.BookList, "books.txt");
+                Writer.WriteListToTxt(_mainWindow.BookList, "books.txt");
             }
         }
     }

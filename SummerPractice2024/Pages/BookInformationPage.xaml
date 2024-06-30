@@ -14,6 +14,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBox x:Name="BookName" Grid.Row="0" Margin="0,0,0,-2" TextWrapping="Wrap" FontSize="24"/>
@@ -22,7 +23,7 @@
         <TextBox x:Name="Handler" Grid.Row="3" TextWrapping="Wrap" FontSize="18"/>
         <TextBox x:Name="ExpiredDate" Grid.Row="4" TextWrapping="Wrap" FontSize="18"/>
 
-        <Button Grid.Row="6" Height="30" VerticalAlignment="Bottom" Content="Save changes" Click="SaveButton_Click"/>
+        <Button Grid.Row="5" Height="30" VerticalAlignment="Bottom" Content="Save changes" Click="SaveButton_Click"/>
 
     </Grid>
 </Page>

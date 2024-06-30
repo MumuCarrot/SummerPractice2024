@@ -1,19 +1,29 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using SPLibrary;
+using SummerPractice2024.UserControls;
 
 namespace SummerPractice2024.Pages
 {
     public partial class UserInformationPage : Page
     {
-        private readonly MainWindow mainWindow;
+        private readonly MainWindow _mainWindow;
         private Customer _user;
+        private List<Book> _currentUserBookList;
 
-        public UserInformationPage(MainWindow mainWindow, Customer user)
+        public UserInformationPage(MainWindow mainWindow, Customer user, List<Book> currentUserBookList)
         {
             InitializeComponent();
-            this.mainWindow = mainWindow;
+            _mainWindow = mainWindow;
             _user = user;
+            _currentUserBookList = currentUserBookList;
+
+            BookStack.Children.Clear();
+
+            foreach (var book in _currentUserBookList) 
+            {
+                BookStack.Children.Add(new UserBookElement(_mainWindow, book));
+            }
 
             Id.Text = _user.Id;
             Nickname.Text = _user.Nickname;
@@ -40,7 +50,7 @@ namespace SummerPractice2024.Pages
                 _user = user;
 
                 bool userExists = false;
-                foreach (var u in mainWindow.UserList)
+                foreach (var u in _mainWindow.UserList)
                 {
                     if (u.Id == _user.Id)
                     {
@@ -56,12 +66,13 @@ namespace SummerPractice2024.Pages
 
                 if (!userExists)
                 {
-                    mainWindow.UserList.Add(_user);
+                    _mainWindow.UserList.Add(_user);
                 }
 
-                mainWindow.Button_Click(sender, e);
+                _mainWindow.Button_Click(sender, e);
+                _mainWindow.UpdateBookLists();
 
-                Writer.WriteListToTxt(mainWindow.UserList, "users.txt");
+                Writer.WriteListToTxt(_mainWindow.UserList, "users.txt");
             }
         }
     }
