@@ -1,7 +1,6 @@
 ﻿using SPLibrary;
 using System.Windows;
 using System.Windows.Controls;
-using static System.Reflection.Metadata.BlobBuilder;
 
 namespace SummerPractice2024.Pages
 {
@@ -34,7 +33,19 @@ namespace SummerPractice2024.Pages
                 ExpiredDate = ExpiredDate.Text,
             };
 
-            if (!book.IsEmpty)
+            bool noExpiredBooks = true;
+            var handlerList = from b in _mainWindow.BookListWithHandler where b.Handler.Equals(book.Handler) select b;
+
+            foreach (var b in handlerList.ToList()) 
+            {
+                if (DateTime.TryParse(b.ExpiredDate, out DateTime result) && result < DateTime.Now)
+                { 
+                    noExpiredBooks = false;
+                    break;
+                }
+            } 
+
+            if (!book.IsEmpty && noExpiredBooks)
             {
                 _book = book;
 

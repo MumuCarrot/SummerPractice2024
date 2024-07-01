@@ -24,6 +24,9 @@ namespace SummerPractice2024
 
         public void UpdateBookLists() 
         {
+            BookListWithHandler.Clear();
+            BookListWithoutHandler.Clear();
+
             foreach (var book in BookList)
             {
                 if (book.Handler == string.Empty)
